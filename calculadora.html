@@ -1,0 +1,51 @@
+<<!DOCTYPE html>
+    <html>
+
+    <head>
+        <meta charset="utf-8" />
+        <script type="text/javascript">
+            function calcula(operacion) {
+                var num1;
+                var num2;
+                var res;
+                num1 = parseInt(document.calculadora.valor1.value);
+                num2 = parseInt(document.calculadora.valor2.value);
+                if (operacion == 1) res = num1 + num2;
+                if (operacion == 2) res = num1 - num2;
+                if (operacion == 3) res = num1 * num2;
+                if (operacion == 4) res = num1 / num2;
+                document.calculadora.resultado.value = res;
+            }
+        </script>
+    </head>
+
+    <body>
+        <form name="calculadora">
+            <input type="button" name="boton7" value=" 7 ">
+            <input type="button" name="boton8" value=" 8 ">
+            <input type="button" name="boton9" value=" 9 ">
+            <input type="button" name="botondiv" value=" / ">
+            <br>
+            <input type="button" name="boton4" value=" 4 ">
+            <input type="button" name="boton5" value=" 5 ">
+            <input type="button" name="boton6" value=" 6 ">
+            <input type="button" name="botondiv" value=" * ">
+            <br>
+            <input type="button" name="boton1" value=" 1 ">
+            <input type="button" name="boton2" value=" 2 ">
+            <input type="button" name="boton3" value=" 3 ">
+            <input type="button" name="botonmas" value=" + ">
+            <br>
+            <input type="button" name="boton0" value=" 0 ">
+            <input type="button" name="botondecimal" value=" . ">
+            <input type="button" name="botonigual" value=" = ">
+            <input type="button" name="botonmenos" value=" - ">
+            <!--
+            <input type="button" name="button1" value=" + " onclick="calcula(1)">
+            <input type="button" name="button2" value=" - " onclick="calcula(2)">
+            <input type="button" name="button3" value=" * " onclick="calcula(3)">
+            <input type="button" name="button4" value=" / " onclick="calcula(4)"><br>
+            Resultado: <input type="text" name="resultado">-->
+        </form>
+    </body>
+    </html>
