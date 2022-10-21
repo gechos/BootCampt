@@ -3,83 +3,49 @@
 
 <head>
     <meta charset="utf-8" />
-    <style>
-        .form {
-            display: flex;
-            flex-direction: column;
-            margin-bottom: 7px;
-            align-content: center;
-        }
-
-        .calculadora {
-            border: 3px blue ridge;
-            text-align: center;
-            background-color: #f6f8d8;
-            width: 50%;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        /*pantalla de visualización: bordes, posición, color de fondo, estilo letra.*/
-        #textoPantalla {
-            padding-right: 10;
-            width: 80%;
-            border: 2px black solid;
-            text-align: :left;
-            padding: 0;
-            background-color: white;
-            font-family: "courier new";
-        }
-
-        /*botones normales: anchura y margen*/
-        .calculadora [type=button] {
-            width: 20%;
-            padding: 0;
-        }
-    </style>
-    <script type="text/javascript">
-        function calcula (operacion)
-        {
-            var num1;
-            var num2;
-            var res;
-            num1 = parseInt(document.calculadora.valor1.value);
-            num2 = parseInt(document.calculadora.valor2.value);
-            if (operacion == 1) res = num1 + num2;
-            if (operacion == 2) res = num1 - num2;
-            if (operacion == 3) res = num1 * num2;
-            if (operacion == 3) res = num1 * num2;
-            if (operacion == 4) res = num1 / num2;
-            document.calculadora.resultado.value = res;
-        }
-    </script>
+    <link rel="stylesheet"  href=".\calculadora.css">
+    <script src="./calculadora.js"></script>
 </head>
-
 <body>
-    <div class="calculadora" <form action="#" name="calculadora" id="calculadora">
-        <p id="textoPantalla">0</p>
-        <p>
-            <input type="button" value="7" />
-            <input type="button" value="8" />
-            <input type="button" value="9" />
-            <input type="button" value="+" />
-        </p>
-        <p>
-            <input type="button" value="4" />
-            <input type="button" value="5" />
-            <input type="button" value="6" />
-            <input type="button" value="-" />
-        </p>
-        <p>
-            <input type="button" value="1" />
-            <input type="button" value="2" />
-            <input type="button" value="3" />
-            <input type="button" value="=" />
-        </p>
-        </form>
-    </div>
-    </form>
+
+<form class="calculadora">
+    
+<table>
+	<tr>
+		<td colspan = "4">
+			<input id="resultado" type="text" value="0" size="20"/>
+			<input id="memoria" type="hidden" value="0" />
+		</td>
+	</tr>
+
+	<tr>
+		<td><input type="button" value="7"	onClick="numero(7);"></td>
+		<td><input type="button" value="8"  onClick="numero(8);"></td>
+		<td><input type="button" value="9" onClick="numero(9);"></td>
+		<td><input type="button" value="+" onClick="operaciones('sumar'); return false;"></td>
+	</tr>
+
+	<tr>
+		<td><input type="button" value="4" onClick="numero(4);"></td>
+		<td><input type="button" value="5" onClick="numero(5);"></td>
+		<td><input type="button" value="6" onClick="numero(6);"></td>
+		<td><input type="button" value="-" onClick="operaciones('restar'); return false;"></td>
+	</tr>
+
+	<tr>
+		<td><input type="button" value="1" onClick="numero(1);"></td>
+		<td><input type="button" value="2" onClick="numero(2);"></td>
+		<td><input type="button" value="3" onClick="numero(3);"></td>
+	</tr>
+	<tr>
+		<td><input type="button" value="0" onClick="numero(0);"></td>
+		<td></td>
+		<td></td>
+		<td><input type="button" value="=" onClick="operaciones('igual'); return false;">
+		</td>
+	</tr>
+</table>	
+</form>
 </body>
 
 </html>

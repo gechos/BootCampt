@@ -1,0 +1,33 @@
+form {
+display: flex;
+flex-direction: column;
+margin-bottom: 7px;
+align-content: center;
+}
+
+.calculadora {
+border: 3px solid #000;
+text-align: center;
+background-color: #f6f8d8;
+flex-direction: column;
+justify-content: center;
+margin-top: 100px;
+margin-left: 600px;
+margin-right: 600px;
+align-items: center;
+}
+
+/*pantalla de visualización: bordes, posición, color de fondo, estilo letra.*/
+#resulatado {
+border: 3px solid blue;
+text-align: :left;
+padding: 10px;
+background-color: white;
+font-family: "courier new";
+}
+
+/*botones normales: anchura y margen*/
+.calculadora [type=button] {
+width: 55px;
+padding: 10;
+}
